@@ -24,7 +24,7 @@ function multi(features) {
  */
 function inherit(a, b) {
     for (var i in b) {
-        if (b[i]) a[i] = b[i];
+        if (b[i] !== null) a[i] = b[i];
     }
     return a;
 }
