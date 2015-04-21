@@ -23,7 +23,9 @@ function multi(features) {
  * @returns {Object}
  */
 function inherit(a, b) {
-    for (var i in b) { a[i] = b[i]; }
+    for (var i in b) {
+        if (b[i]) a[i] = b[i];
+    }
     return a;
 }
 
